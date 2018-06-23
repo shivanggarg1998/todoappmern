@@ -14,11 +14,10 @@ add(req,res,next)
         note : req.body.note,
         isDone : req.body.isDone
     });
-
     newNote.save((err,note)=>{
         if(err)
         {
-            res.json({msg : 'failed to load note'});
+            res.json(err);
         }
         else{
             console.log(note);
