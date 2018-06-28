@@ -16,7 +16,7 @@ constructor(props)
 }
 componentDidMount()
 {
-  axios.get('http://localhost:4200/api/notes').then(res =>{
+  axios.get('/api/notes').then(res =>{
     const notess = res.data;
     this.setState({
       notes : notess,
@@ -39,7 +39,7 @@ add(){
   {
     return;
   }
-  axios.post('http://localhost:4200/api/note', {
+  axios.post('/api/note', {
     note: this.state.newnote,
     isDone: false
   })
@@ -63,7 +63,7 @@ add(){
 removes(index)
 {
   let self = this;
-  const url = 'http://localhost:4200/api/notes/' + this.state.notes[index]._id;
+  const url = '/api/notes/' + this.state.notes[index]._id;
   axios.delete(url).then((res)=>{
     self.setState({
       notes : res.data,
@@ -75,7 +75,7 @@ onchecked(index)
   let self = this;
   let temp = this.state.notes[index];
   temp.isDone = !temp.isDone;
-  const url = 'http://localhost:4200/api/note/' + this.state.notes[index]._id;
+  const url = '/api/note/' + this.state.notes[index]._id;
   axios.patch(url,temp).then((res) =>{
     console.log("checked");
     self.setState({
@@ -128,7 +128,7 @@ savechanges(e,index)
 {
   let self = this;
   let temp = this.state.notes[index];
-  const url = 'http://localhost:4200/api/note/' + this.state.notes[index]._id;
+  const url = '/api/note/' + this.state.notes[index]._id;
   axios.patch(url,temp).then((res) =>{
     console.log("checked");
     self.setState({
