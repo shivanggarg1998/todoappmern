@@ -51,7 +51,7 @@ app.use('/api',route);
  app.get('/',(req,res)=>{
      res.send('foobar');
  });
-app.listen(port,() => {
+app.listen(process.env.PORT || port,() => {
 console.log('Server started at port :'+port);
 
 });

@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon app.js",
-    "heroku-postbuild": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "server": "node app.js",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "shivang",
   "license": "ISC",
