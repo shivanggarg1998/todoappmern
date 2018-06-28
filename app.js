@@ -49,7 +49,6 @@ app.use(express.static(path.join(__dirname,'/client')));
 app.use('/api',route);
  //testing
  // ... other imports
-const path = require("path")
 
 // ... other app.use middleware setups
 app.use(express.static(path.join(__dirname, "client", "build")))
