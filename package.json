@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "node app.js",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "start": "npm install && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "shivang",
   "license": "ISC",
