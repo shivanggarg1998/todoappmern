@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && npm install && npm run build",
     "server": "node app.js",
-    "start": "npm install && concurrently --kill-others-on-fail \"yarn client\" \"yarn server\""
+    "start": "npm install && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "shivang",
   "license": "ISC",
