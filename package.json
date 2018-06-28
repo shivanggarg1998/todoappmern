@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "heroku-postbuild": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "shivang",
   "license": "ISC",
